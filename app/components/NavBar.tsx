@@ -14,7 +14,7 @@ export default function NavBar() {
     <div className="relative">
       <p className="text-gray-300 font-semibold sm:text-sm text-xs ">Bitcoin</p>
       <div
-        className="bg-white rounded-sm px-4 py-2 sm:px-16 sm:py-3 flex justify-between
+        className="bg-white rounded-sm px-4 py-2 sm:px-16 sm:py-4 flex justify-between
        items-center shadow-md"
         style={{
           boxShadow:
@@ -24,15 +24,15 @@ export default function NavBar() {
         <div>
           <Image src={koinxLogo} alt="koinX-logo" />
         </div>
-        <div className="sm:flex flex-row gap-8 items-center font-semibold text-base">
+        <div className="sm:flex flex-row gap-9 items-center font-semibold text-base sm:text-lg">
           <button
-            className="text-black px-3 py-2 rounded-lg sm:hidden"
+            className="text-black px-3 py-2 rounded-lg text-xl sm:hidden"
             onClick={toggleMenu}
           >
             {showMenu ? "✕" : "☰"}
           </button>
 
-          <div className="hidden sm:flex flex-row gap-6">
+          <div className="hidden sm:flex flex-row gap-7 text-base sm:text-lg items-center">
             <Link href="#" className="black hover:text-gray-700">
               Crypto Taxes
             </Link>
@@ -43,7 +43,10 @@ export default function NavBar() {
               Resource Center
             </Link>
           </div>
-          <button className="text-white px-3 py-2 rounded-lg bg-blue-500 hover:bg-blue-600 hidden sm:block">
+          <button
+            className="text-white px-6 py-2 text-center rounded-md bg-blue-500
+             hover:bg-blue-600 hidden sm:block"
+          >
             Get Started
           </button>
         </div>
@@ -55,12 +58,12 @@ export default function NavBar() {
           style={{ width: "73%" }}
         >
           <button
-            className="absolute top-6 right-4 text-white px-3 py-2"
+            className="absolute top-6 right-4 text-white px-3 py-2 text-xl"
             onClick={toggleMenu}
           >
             ✕
           </button>
-          <div className="flex flex-col gap-11 pt-24 items-center">
+          <div className="flex flex-col gap-11 pt-24 items-center text-lg">
             <Link href="#" className="text-white hover:text-gray-200">
               Crypto Taxes
             </Link>
@@ -71,7 +74,7 @@ export default function NavBar() {
               Resource Center
             </Link>
             <button
-              className="text-white px-3 py-2 rounded-md bg-blue-500 hover:bg-blue-600"
+              className="text-white px-5 py-2 rounded-md bg-blue-500 hover:bg-blue-600"
               onClick={toggleMenu}
             >
               Get Started
